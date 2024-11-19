@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+  background-image: url(imagenes/background\ pag\ web.png);
+}
+
+.section {
+  width: 960px;
+  padding: 50px 0;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.nav-bar a:hover {
+  background: white;
+}
+
+.sobre-mi, .información{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.foto, .portfolio-grid img, .skills-grid img {
+  border-radius: 26px;
+  transition: transform 0.3s;
+  width: 100px;
+  height: 100px;
+}
+
+.foto {
+  width: 300px;
+  height: 350px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.proyecto:hover img {
+  transform: scale(3);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.skill {
+  text-align: center;
+}
+
+.información, .formulario{
+  width: 40%;
+  text-align:justify;
+}
+
+.formulario{
+  text-align: right;
+  width: 300px;
+  position: absolute;
+  right: 200px;
+  margin-top: auto;
+}
+.información{
+margin-top: 20px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+button {
+  background-color:black;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:rgb(56, 56, 56);
+}
+h1{
+  color: hotpink;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+h2{
+  font-size: 35px;
+  font-weight: bold;
+  color: hotpink;
+  margin-bottom: 50px;
+}
+h3{
+  font-size: 50px;
+}
+h4{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+p{
+  font-size: 18px;
+}
+.nav-bar{
+  justify-content: center;
+}
+#mapa{
+  position: absolute;
+  left: 200px;
+  margin-top: auto;
+}
+  </style>
+</head>  
+<body>
+
+  <!-- SECCIÓN: INICIO -->
+  <section id="inicio" class="section">
+    <div class="container">
+      <h1>Cg.Graph</h1>
+      <nav class="nav-bar">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#skills">Skills</a>
+        <a href="#información">Información</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: SOBRE MÍ -->
+  <section id="sobre-mi" class="section">
+    <div class="container sobre-mi">
+      <div class="texto">
+        <h2>Camila Gonzalez</h2>
+        <h3>Diseñadora Gráfica</h3>
+        <p>Hola, mi nombre es Camila Gonzalez y soy estudiante de Diseño Gráfico en la Escuela Multimedial DaVinci, apasionada por el arte, la creatividad y el diseño visual. Cuento con gran conocimiento en distintas áreas del diseño, estoy motivada a aplicar mis conocimientos y explorar nuevas oportunidades en este campo del diseño, aportando ideas frescas y creatividad en cada proyecto.</p>
+      </div>
+      <img src="imagenes/perfil cami 2.JPG" alt="Foto de perfil" class="foto">
+    </div>
+  </section>
+
+  <!-- SECCIÓN: PORTFOLIO -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="proyecto">
+          <img src="imagenes/MOCKUP REVISTAS 5.jpg"Proyecto 1">
+          <h4>The Eras Tour Magazine</h4>
+          <p>Diseño editorial.</p>
+        </div>
+        <div class="proyecto">
+          <img src="imagenes/Mockup Café.jpg"Proyecto 2">
+          <h4>Mocca.</h4>
+          <p>Diseño de marcas.</p>
+        </div>
+        <div class="proyecto">
+          <img src="imagenes/Scene 14.png"Proyecto 3">
+          <h4>Lady Drive</h4>
+          <p>Ux/Ui</p>
+        </div>
+        <div class="proyecto">
+          <img src="imagenes/cover and pages ts.jpg"Proyecto 4">
+          <h4>RBD Magazine</h4>
+          <p>Editorial digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <img src="imagenes/ilustrator.png" alt="Skill 1">
+          <h4>Ilustrator</h4>
+          <p>85%</p>
+        </div>
+        <div class="skill">
+          <img src="imagenes/photoshop.png" alt="Skill 2">
+          <h4>Photoshop</h4>
+          <p>80%</p>
+        </div>
+        <div class="skill">
+          <img src="imagenes/indesign.png" alt="Skill 3">
+          <h4>InDesign</h4>
+          <p>80%</p>
+        </div>
+        <div class="skill">
+          <img src="imagenes/after effects.png" alt="Skill 4">
+          <h4>After Effects</h4>
+          <p>75%</p>
+        </div>
+        <div class="skill">
+          <img src="imagenes/cinema 4d.png" alt="Skill 5">
+          <h4>Cinema 4D</h4>
+          <p>50%</p>
+        </div>
+        <div class="skill">
+          <img src="imagenes/visual studio code.png" alt="Skill 6">
+          <h4>Visual Studio Code</h4>
+          <p>50%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: INFORMACIÓN -->
+  <section id="Información" class="section">
+    <div class="container informacion"></div>
+    <div class="info-informacion"></div>
+        <h2>Información</h2>
+        
+      <form class="formulario">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Número de teléfono">
+        <input type="text" placeholder="Ubicación">
+        <textarea placeholder="Comentarios"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62800.306230280155!2d-68.7832775403275!3d10.34035318431709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e80cf3350f37fd9%3A0xda3f386ac384deb6!2sSan%20Felipe%2C%20Yaracuy!5e0!3m2!1ses!2sve!4v1731891990299!5m2!1ses!2sve" width="400" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+</body>
+</html>
